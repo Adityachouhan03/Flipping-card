@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+section {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    /* border: 10px solid; */
+    background-color: #121321;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f3f5f5;
+    perspective: 1000px;
+
+}
+
+section::before {
+    content: " ";
+    position: absolute;
+    background: linear-gradient(90deg, #9c27b0, #f3f5f5);
+    height: 240px;
+    width: 240px;
+    transform: translate(-150px, -100px);
+
+    border-radius: 50%;
+}
+
+section::after {
+    content: " ";
+    position: absolute;
+
+    background: linear-gradient(90deg, #9c27b0, #f3f5f5);
+    height: 240px;
+    width: 240px;
+    transform: translate(150px, 100px);
+    border-radius: 50%;
+}
+
+.container {
+    position: relative;
+    height: 275px;
+    width: 375px;
+    z-index: 100;
+    /* border: 10px solid; */
+    transition: 0.6s;
+    transform-style: preserve-3d;
+}
+
+.container:hover {
+    transform: rotateY(180deg);
+}
+
+.container .front-card {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(25px);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 45px rgba(255, 255, 255, 0.25);
+    border-radius: 25px;
+    padding: 12px;
+    /* backface-visibility: hidden; */
+}
+
+#img1 {
+    /* border: 10px solid; */
+    padding-top: 10px;
+    width: 80px;
+}
+
+.master-card {
+    color: #f3f5f5;
+    font-weight: 300;
+    font-size: 18px;
+    transform: translate(80px, -45px);
+}
+
+#img2 {
+    width: 80px;
+    transform: translate(200px, 0);
+}
+
+.card-detail {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-top: 2%;
+}
+
+h6 {
+    margin-left: 15px;
+    font-size: 10px;
+    font-weight: 400;
+
+}
+
+h5.number {
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin-left: 15px;
+    font-weight: 300;
+
+}
+
+h5.name {
+    margin: 20px 0px 0px 15px;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.date {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.back-card {
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(25px);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 45px rgba(255, 255, 255, 0.25);
+    border-radius: 25px;
+    padding: 15px 25px 25px 25px;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+}
+
+.back-card .service {
+    font-size: 8px;
+}
+
+.mangetic-strip {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    height: 45px;
+    width: 100%;
+    background-color: black;
+
+}
+
+.back-card .singature {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-top: 80px;
+    height: 45px;
+    width: 85%;
+    background: repeating-linear-gradient(#f3f5f5,
+            #fff 3px, #efefef 0px, #efefef 9px);
+    border-radius: 6px;
+
+
+
+
+}
+
+.singature i {
+    color: black;
+    margin-right: -30px;
+    padding: 4px 6px;
+    background-color: #f3f5f5;
+    border-radius: 4px;
+    font-size: 12px;
+    z-index: -1;
+}
+
+.tandc {
+    font-size: 8px;
+    margin-top: 15px;
+}
